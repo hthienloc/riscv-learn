@@ -160,6 +160,6 @@ function generateStubHint(
   return {
     hint: errorHint,
     textbookRef: `Chapter ${chapterId}, Section ${chapterId}.1`,
-    nextExerciseId: `ch0${chapterId}-ex01`,
+    nextExerciseId: `ch${String(chapterId).padStart(2, '0')}-ex01`,
   };
 }

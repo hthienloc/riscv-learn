@@ -3,7 +3,7 @@ import { type Memory } from '../memory/memory.js';
 
 export const TEXT_BASE = 0x00010000;
 export const DATA_BASE = 0x00080000;
-export const STACK_TOP = 0x001ffff0;
+export const STACK_TOP = 0x00200000; // 16-byte aligned per RISC-V ABI
 
 export interface AssembledProgram {
   /** Instruction address map: index -> address */

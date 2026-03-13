@@ -1,6 +1,9 @@
 /** Default memory size: 4 MiB */
 const DEFAULT_SIZE = 4 * 1024 * 1024;
 
+/** Maximum length of a null-terminated string read from memory */
+const MAX_STRING_LENGTH = 65536;
+
 /**
  * Byte-addressable memory model for the RISC-V simulator.
  * Stores data in a Uint8Array and supports byte/half-word/word accesses.
@@ -98,7 +101,7 @@ export class Memory {
       if (b === 0) break;
       chars.push(b);
       i++;
-      if (i > 65536) throw new Error('String too long or missing null terminator');
+      if (i > MAX_STRING_LENGTH) throw new Error('String too long or missing null terminator');
     }
     return String.fromCharCode(...chars);
   }

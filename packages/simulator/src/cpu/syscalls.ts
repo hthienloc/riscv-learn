@@ -16,7 +16,7 @@ export function handleSyscall(regs: RegisterFile, mem: Memory): SyscallResult {
     case 1: // print_int
       return { output: String(a0 | 0) };
 
-    case 2: // print_float (stub)
+    case 2: // print_float (stub — floating-point not yet implemented)
       return { output: '0.0' };
 
     case 4: // print_string
