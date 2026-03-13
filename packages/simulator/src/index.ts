@@ -8,6 +8,7 @@ import type { Instruction } from './assembler/parser.js';
 import type { AssembledProgram } from './assembler/assembler.js';
 
 export type { RegisterEntry } from './cpu/registers.js';
+export { Memory } from './memory/memory.js';
 export { TEXT_BASE, DATA_BASE, STACK_TOP } from './assembler/assembler.js';
 
 export type SimulatorEvent = 'step' | 'halt' | 'error' | 'breakpoint' | 'output';

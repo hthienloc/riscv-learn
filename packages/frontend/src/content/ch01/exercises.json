@@ -1,0 +1,36 @@
+{
+  "chapterId": 1,
+  "exercises": [
+    {
+      "id": "ch01-ex01",
+      "type": "multiple-choice",
+      "prompt": "Which metric measures the time taken to complete a single task?",
+      "options": ["Throughput", "Latency", "Bandwidth", "Clock rate"],
+      "answer": "Latency",
+      "hints": ["Think about a single request vs many requests per second."],
+      "chapterRef": "Section 1.6"
+    },
+    {
+      "id": "ch01-ex02",
+      "type": "fill-blank",
+      "prompt": "Performance is defined as 1 / ___.",
+      "answer": "Execution Time",
+      "hints": ["The faster a program runs, the higher its performance."],
+      "chapterRef": "Section 1.6"
+    },
+    {
+      "id": "ch01-ex03",
+      "type": "multiple-choice",
+      "prompt": "Amdahl's Law states that the speedup from improving a component is limited by:",
+      "options": [
+        "The clock frequency of the CPU",
+        "The fraction of time the component is used",
+        "The number of cores",
+        "The cache size"
+      ],
+      "answer": "The fraction of time the component is used",
+      "hints": ["If only 20% of the program uses the component, max speedup is limited."],
+      "chapterRef": "Section 1.9"
+    }
+  ]
+}
