@@ -26,7 +26,7 @@ const DEFAULT_SOURCE = `# RISC-V Assembly Example
 loop:
   add  t0, t0, t1    # sum += i
   addi t1, t1, 1     # i++
-  ble  t1, t2, loop  # if i <= limit, loop
+  bge  t2, t1, loop  # if limit >= i (i <= limit), loop
 
   addi a0, t0, 0     # a0 = sum
   addi a7, zero, 1   # syscall: print_int
