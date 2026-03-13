@@ -1,0 +1,30 @@
+{
+  "chapterId": 2,
+  "exercises": [
+    {
+      "id": "ch02-ex01",
+      "type": "multiple-choice",
+      "prompt": "In RISC-V, which register is hardwired to zero?",
+      "options": ["x1 (ra)", "x0 (zero)", "x2 (sp)", "x8 (s0)"],
+      "answer": "x0 (zero)",
+      "hints": ["This register always reads as 0 and writes are ignored."],
+      "chapterRef": "Section 2.3"
+    },
+    {
+      "id": "ch02-ex02",
+      "type": "fill-blank",
+      "prompt": "The RISC-V instruction `addi t0, zero, 42` loads the immediate value ___ into register t0.",
+      "answer": "42",
+      "hints": ["addi adds an immediate to a register."],
+      "chapterRef": "Section 2.4"
+    },
+    {
+      "id": "ch02-ex03",
+      "type": "code-challenge",
+      "prompt": "Write RISC-V assembly to compute 10 + 20 and store the result in a0, then print it using syscall 1.",
+      "answer": "addi t0, zero, 10\naddi t1, zero, 20\nadd a0, t0, t1\naddi a7, zero, 1\necall",
+      "hints": ["Use addi to load immediates, add to add them, then syscall 1 (print_int)."],
+      "chapterRef": "Section 2.4"
+    }
+  ]
+}
