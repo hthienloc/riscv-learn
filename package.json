@@ -1,0 +1,14 @@
+{
+  "name": "riscv-learn",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "dev": "npm run dev --workspace=packages/frontend",
+    "dev:backend": "npm run dev --workspace=packages/backend",
+    "build": "npm run build --workspace=packages/simulator && npm run build --workspace=packages/frontend",
+    "test": "npm run test --workspace=packages/simulator",
+    "lint": "npm run lint --workspace=packages/frontend",
+    "typecheck": "npm run typecheck --workspace=packages/simulator && npm run typecheck --workspace=packages/frontend"
+  }
+}
